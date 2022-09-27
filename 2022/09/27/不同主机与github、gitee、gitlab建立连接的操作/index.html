@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>不同主机与github、gitee、gitlab建立连接的操作 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1.任意文件夹右键git bash here，打开git终端，输入cd ~&#x2F;.ssh进入.ssh目录，或者直接在C盘用户下找。 2.输入命令，生成密钥（后面名字可以随便取），然后全程回车下一步，直到生成密钥成功。 123github: ssh-keygen -t rsa -C &quot;你的邮箱@xxx.com&quot; -f &quot;github_id_rsa&quot;git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不同主机与github、gitee、gitlab建立连接的操作">
+<meta property="og:url" content="http://example.com/2022/09/27/%E4%B8%8D%E5%90%8C%E4%B8%BB%E6%9C%BA%E4%B8%8Egithub%E3%80%81gitee%E3%80%81gitlab%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.任意文件夹右键git bash here，打开git终端，输入cd ~&#x2F;.ssh进入.ssh目录，或者直接在C盘用户下找。 2.输入命令，生成密钥（后面名字可以随便取），然后全程回车下一步，直到生成密钥成功。 123github: ssh-keygen -t rsa -C &quot;你的邮箱@xxx.com&quot; -f &quot;github_id_rsa&quot;git">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="d:/01-myBlog/blog-hz/source/_posts/images/image-git-error-20220927.png">
+<meta property="article:published_time" content="2022-09-27T13:52:25.000Z">
+<meta property="article:modified_time" content="2022-09-27T14:12:45.414Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="git、git配置">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/01-myBlog/blog-hz/source/_posts/images/image-git-error-20220927.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-不同主机与github、gitee、gitlab建立连接的操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/27/%E4%B8%8D%E5%90%8C%E4%B8%BB%E6%9C%BA%E4%B8%8Egithub%E3%80%81gitee%E3%80%81gitlab%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time class="dt-published" datetime="2022-09-27T13:52:25.000Z" itemprop="datePublished">2022-09-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      不同主机与github、gitee、gitlab建立连接的操作
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>1.任意文件夹右键git bash here，打开git终端，输入cd ~&#x2F;.ssh进入.ssh目录，或者直接在C盘用户下找。</p>
+<p>2.输入命令，生成密钥（后面名字可以随便取），然后全程回车下一步，直到生成密钥成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">github: ssh-keygen -t rsa -C &quot;你的邮箱@xxx.com&quot; -f &quot;github_id_rsa&quot;</span><br><span class="line"></span><br><span class="line">gitee: ssh-keygen -t rsa -C &quot;你的邮箱@xxx.com&quot; -f &quot;gitee_id_rsa&quot;</span><br></pre></td></tr></table></figure>
+
+<p>3.打开新生成的 github_id_rsa.pub文件（名字可以是自己取的那个），复制公钥，添加至github对应页面中（gitee同理）</p>
+<p>4.在.ssh目录下新建config文件，文件内容为（如果电脑里有多个密钥对应不同平台，主要用于配置哪个密钥对应哪个平台）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># coding</span><br><span class="line">Host e.coding.net</span><br><span class="line">HostName e.coding.net</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/coding_id_rsa</span><br><span class="line">User git</span><br><span class="line"></span><br><span class="line"># gitee</span><br><span class="line">Host gitee.com</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/gitee_id_rsa</span><br><span class="line">User git</span><br><span class="line"></span><br><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/github_id_rsa</span><br><span class="line">User git</span><br><span class="line"></span><br><span class="line"># gitlab</span><br><span class="line">Host gitlab.xxx.com (xxx为你使用的公司平内部台地址)</span><br><span class="line">HostName gitlab.xxx.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/gitlab_id_rsa</span><br><span class="line">User git</span><br></pre></td></tr></table></figure>
+
+<p>5.测试连接是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br><span class="line"></span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">ssh -T git@gitlab.xxx.com</span><br></pre></td></tr></table></figure>
+
+<p>6.遇到问题</p>
+<img src="D:\01-myBlog\blog-hz\source\_posts\images\image-git-error-20220927.png" alt="image-20220927220758594" style="zoom:100%;" />
+
+<p>这是本机想将此密钥添加到本地认证，差不多意思。。。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解决：</span><br><span class="line">输入yes，回车确认</span><br></pre></td></tr></table></figure>
+
+<p>至此，配置成功。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/27/%E4%B8%8D%E5%90%8C%E4%B8%BB%E6%9C%BA%E4%B8%8Egithub%E3%80%81gitee%E3%80%81gitlab%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%93%8D%E4%BD%9C/" data-id="cl8ka435a00038cu37fdpab46" data-title="不同主机与github、gitee、gitlab建立连接的操作" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git%E3%80%81git%E9%85%8D%E7%BD%AE/" rel="tag">git、git配置</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/09/20/Vue%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A71/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue的开发技巧1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP%E3%80%81HTTPS-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" rel="tag">HTTP、HTTPS, 计算机网络基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue3%E3%80%81Vue2/" rel="tag">Vue3、Vue2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E3%80%81git%E9%85%8D%E7%BD%AE/" rel="tag">git、git配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/HTTP%E3%80%81HTTPS-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">HTTP、HTTPS, 计算机网络基础</a> <a href="/tags/Vue3%E3%80%81Vue2/" style="font-size: 10px;">Vue3、Vue2</a> <a href="/tags/git%E3%80%81git%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">git、git配置</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/09/27/%E4%B8%8D%E5%90%8C%E4%B8%BB%E6%9C%BA%E4%B8%8Egithub%E3%80%81gitee%E3%80%81gitlab%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%93%8D%E4%BD%9C/">不同主机与github、gitee、gitlab建立连接的操作</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/20/Vue%E7%9A%84%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A71/">Vue的开发技巧1</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/19/%E5%9B%BE%E8%A7%A3HTTP%E4%B8%8EHTTPS%E7%9A%84%E4%B8%BB%E8%A6%81%E7%9F%A5%E8%AF%86/">图解HTTP与HTTPS的主要知识</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/14/2022-9-14-%E6%B5%8B%E8%AF%95%E6%97%A5%E8%AE%B0/">2022.9.14-测试日记</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/10/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
